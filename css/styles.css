@@ -4,6 +4,7 @@
   --brand-color-3: #757575;
   --brand-color-4: #ffffff99;
   --brand-color-5: #fff;
+  --color-5: #afb1b8;
 }
 * {
   padding: 0;
@@ -186,7 +187,7 @@ header svg {
   gap: 30px;
 }
 
-.studio-section-3 {
+.studio-section-3-background {
   background: #f5f4fa;
 }
 .studio-section-3 ul {
@@ -208,6 +209,8 @@ header svg {
   box-shadow: 0px 1px 3px #0000001f, 0px 1px 1px #00000024,
     0px 2px 1px #00000033;
   border-radius: 0px 0px 4px 4px;
+  display: flex;
+  flex-direction: column;
 }
 .studio-section-3 figcaption {
   padding: 30px 32px;
@@ -238,7 +241,7 @@ header svg {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  fill: #afb1b8;
+  fill: var(--color-5);
 }
 .social-links a:hover,
 .social-links a:focus {
@@ -261,7 +264,7 @@ header svg {
 }
 .studio-section-4 a {
   display: block;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--color-5);
   border-radius: 4px;
   padding: 17.71px 32px 14.25px;
 }
@@ -269,7 +272,7 @@ header svg {
   margin-right: 30px;
 }
 .studio-section-4 svg {
-  fill: #afb1b8;
+  fill: var(--color-5);
 }
 .studio-section-4 a:hover,
 .studio-section-4 a:focus {
@@ -319,6 +322,10 @@ header svg {
   cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio-section-1-list-2 figure {
+  display: flex;
+  flex-direction: column;
 }
 .portfolio-section-1-list-2 figcaption {
   padding: 20px 24px;
