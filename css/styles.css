@@ -15,7 +15,6 @@
 body {
   font-family: "Roboto", "Raleway", sans-serif;
   color: var(--color-7);
-  width: 1600px;
 }
 .container {
   width: 1200px;
@@ -132,6 +131,8 @@ header ul {
   background-image: linear-gradient(to bottom, #2f303a66 0%, #2f303a66 100%),
     url("../images/order.jpg");
   background-size: 1600px;
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 .studio-order h1 {
   font-weight: 900;
