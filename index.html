@@ -51,7 +51,7 @@
     <main>
       <section class="studio-order">
         <h1>EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-        <button type="button">Zamów usługę</button>
+        <button type="button" data-modal-open>Zamów usługę</button>
       </section>
 
       <section class="container section studio-section-1">
@@ -510,5 +510,21 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div>
+        <button type="button" data-modal-close>
+          <svg class="backdrop-close-button" width="30px" height="30px">
+            <use
+              x="8"
+              y="9"
+              width="11px"
+              height="11px"
+              href="./images/icons.svg#close-button-icon"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="modal.js"></script>
   </body>
 </html>
