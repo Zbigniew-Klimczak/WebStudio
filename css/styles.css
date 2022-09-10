@@ -127,6 +127,7 @@ header ul {
 }
 .studio-order {
   background-color: var(--color-1);
+  margin: 0 auto;
   padding: 200px 452px 200px 452px;
   background-image: linear-gradient(to bottom, #2f303a66 0%, #2f303a66 100%),
     url("../images/order.jpg");
