@@ -352,52 +352,7 @@ header ul {
   fill: var(--color-2);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 1;
-  visibility: visible;
-}
-.backdrop > div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
-  background-color: var(--color-6);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-.backdrop button {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-6);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  cursor: pointer;
-}
-.backdrop-close-button {
-  fill: #000;
-}
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
+
 .portfolio-section-1-list-1 {
   display: flex;
   justify-content: center;
@@ -505,8 +460,7 @@ footer {
 }
 footer > div {
   display: flex;
-  justify-content: flex-start;
-  grid-gap: 70px;
+  justify-content: space-between;
 }
 .footer-logo {
   display: block;
@@ -562,6 +516,7 @@ footer > div {
 }
 .footer-join-us {
   margin-top: 12px;
+  margin-left: 70px;
 }
 .footer-join-us > span {
   display: block;
@@ -593,4 +548,233 @@ footer > div {
 .footer-social-links li:focus {
   background-color: var(--color-2);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.newsletter {
+  margin-top: 12px;
+  margin-left: 78px;
+}
+.newsletter div {
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 12px;
+}
+.newsletter label {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-6);
+}
+.newsletter input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid #ffffff4d;
+  filter: drop-shadow(0px 4px 4px #00000026);
+  border-radius: 4px;
+  padding: 15px 16px;
+  color: var(--color-6);
+  background-color: transparent;
+}
+
+.newsletter button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  padding: 10px 28px 10px 42px;
+  color: var(--color-6);
+  background-color: var(--color-2);
+  border: none;
+  box-shadow: 0px 4px 4px #00000026;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.newsletter svg {
+  fill: var(--color-6);
+  margin-left: 24px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.newsletter button:hover,
+.newsletter button:focus {
+  background-color: #f5f4fa;
+  box-shadow: 0px 3px 1px #2196f31a, 0px 1px 2px #2196f314,
+    0px 2px 2px #2196f31f;
+  color: var(--color-7);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.newsletter button:hover svg,
+.newsletter button:focus svg {
+  fill: var(--color-7);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  visibility: visible;
+}
+.backdrop > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: var(--color-6);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px;
+}
+.backdrop h2 {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.backdrop-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  margin-top: 2px;
+}
+.backdrop-inputs label {
+  position: relative;
+  font-size: 12px;
+  line-height: 1.21;
+  letter-spacing: 0.01em;
+  color: var(--color-3);
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+.backdrop-inputs svg {
+  position: absolute;
+  fill: var(--color-7);
+  top: 13px;
+  left: 14px;
+  cursor: text;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-input-icon {
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+.backdrop-inputs input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 42px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-input-icon:hover input,
+.backdrop-input-icon:focus input {
+  border-color: var(--color-2);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-input-icon:hover svg,
+.backdrop-input-icon:focus svg {
+  fill: var(--color-2);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-inputs textarea {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-inputs textarea:focus,
+.backdrop-inputs textarea:hover {
+  border-color: var(--color-2);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-agreements {
+  margin: 14px;
+}
+.backdrop-agreements label {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--color-3);
+  text-align: center;
+}
+.backdrop-agreements a {
+  color: var(--color-2);
+}
+.backdrop form > button {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--color-6);
+  background: var(--color-2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 76px;
+  margin: 0 auto;
+  margin-top: 30px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop form > button:hover,
+.backdrop form > button:focus {
+  background-color: #f5f4fa;
+  box-shadow: 0px 3px 1px #2196f31a, 0px 1px 2px #2196f314,
+    0px 2px 2px #2196f31f;
+  color: var(--color-7);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop > div > button {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-6);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.backdrop-close-button {
+  fill: #000;
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }

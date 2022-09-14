@@ -508,10 +508,99 @@
             </li>
           </ul>
         </div>
+        <div class="newsletter">
+          <form name="signup-form">
+            <label for="user-mail">Zapisz się do newslettera</label>
+            <div>
+              <input
+                type="email"
+                name="e-mail"
+                id="user-mail"
+                placeholder="E-mail"
+              />
+              <button type="submit">
+                Zapisz się
+                <svg width="24px" height="24px">
+                  <use
+                    width="24px"
+                    height="24px"
+                    href="./images/icons.svg#send-icon"
+                  ></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div>
+        <h2>Zostaw swoje dane w formularzu poniżej</h2>
+        <form name="contact-form">
+          <div class="backdrop-inputs">
+            <label for="user-name">Imię </label>
+            <div class="backdrop-input-icon">
+              <input type="text" name="user-name" id="user-name" />
+              <svg class="form-icon" width="16px" height="14px">
+                <use
+                  width="12px"
+                  height="12px"
+                  x="2"
+                  y="1"
+                  href="./images/icons.svg#name-icon"
+                ></use>
+              </svg>
+            </div>
+            <label for="user-phone-number">Telefon </label>
+            <div class="backdrop-input-icon">
+              <input
+                type="tel"
+                name="user-phone-number"
+                id="user-phone-number"
+              />
+              <svg class="form-icon" width="16px" height="14px">
+                <use
+                  width="13px"
+                  height="13px"
+                  x="1.5"
+                  y="1.5"
+                  href="./images/icons.svg#phone-icon"
+                ></use>
+              </svg>
+            </div>
+            <label for="user-e-mail">Email </label>
+            <div class="backdrop-input-icon">
+              <input type="email" name="user-e-mail" id="user-e-mail" />
+              <svg class="form-icon" width="16px" height="14px">
+                <use
+                  width="15px"
+                  height="12px"
+                  x="0.5"
+                  y="1"
+                  href="./images/icons.svg#email-icon"
+                ></use>
+              </svg>
+            </div>
+            <label for="user-comment">Komentarz</label>
+            <textarea
+              name="feedback"
+              placeholder="Wprowadź tekst"
+              id="user-comment"
+            ></textarea>
+          </div>
+          <div class="backdrop-agreements">
+            <input
+              type="checkbox"
+              name="user-agreements"
+              id="user-agreements"
+            />
+            <label for="user-agreements"
+              >Oświadczam iż akceptuję <a href="">Regulamin</a> i
+              <a href="">Politykę Prywatności</a>.</label
+            >
+          </div>
+          <button type="submit">Wyślij</button>
+        </form>
         <button type="button" data-modal-close>
           <svg class="backdrop-close-button" width="30px" height="30px">
             <use
