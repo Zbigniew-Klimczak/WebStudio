@@ -751,7 +751,7 @@ footer > div {
 .backdrop-agreements svg {
   position: absolute;
   opacity: 0;
-  top: 5px;
+  top: 6px;
   left: 0;
   fill: var(--color-6);
   pointer-events: none;
