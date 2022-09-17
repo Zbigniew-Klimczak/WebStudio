@@ -577,6 +577,13 @@ footer > div {
   padding: 15px 16px;
   color: var(--color-6);
   background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.newsletter input:hover,
+.newsletter input:focus {
+  border-color: var(--color-2);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .newsletter button {
@@ -673,8 +680,8 @@ footer > div {
   fill: var(--color-7);
   top: 13px;
   left: 14px;
-  cursor: text;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
 }
 .backdrop-input-icon {
   position: relative;
@@ -686,16 +693,18 @@ footer > div {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  background-color: transparent;
   padding: 12px 42px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
-.backdrop-input-icon:hover input,
-.backdrop-input-icon:focus input {
+.backdrop-input-icon input:focus,
+.backdrop-input-icon input:hover {
   border-color: var(--color-2);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop-input-icon:hover svg,
-.backdrop-input-icon:focus svg {
+.backdrop-input-icon input:focus + svg,
+.backdrop-input-icon input:hover + svg {
   fill: var(--color-2);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -707,6 +716,7 @@ footer > div {
   border-radius: 4px;
   padding: 12px 16px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
 .backdrop-inputs textarea:focus,
 .backdrop-inputs textarea:hover {
@@ -716,6 +726,40 @@ footer > div {
 
 .backdrop-agreements {
   margin: 14px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.backdrop-agreements input {
+  appearance: none;
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-agreements input:checked {
+  background-color: var(--color-2);
+  border-color: var(--color-2);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-agreements svg {
+  position: absolute;
+  opacity: 0;
+  top: 5px;
+  left: 0;
+  fill: var(--color-6);
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-agreements input:checked + svg {
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop-agreements label {
   font-size: 14px;
@@ -769,6 +813,12 @@ footer > div {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop > div > button:focus,
+.backdrop > div > button:hover {
+  border-color: var(--color-2);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop-close-button {
   fill: #000;
