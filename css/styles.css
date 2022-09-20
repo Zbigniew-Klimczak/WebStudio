@@ -27,36 +27,39 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-header {
+.header {
   border-bottom: 1px solid #ececec;
 }
-header div {
+.header__grid {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header-logo {
+.logo {
+  display: block;
   text-decoration: none;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  color: #000;
   letter-spacing: 0.03em;
 }
-.header-logo span {
+.logo--header {
+  color: #000;
+}
+.logo__color {
   color: var(--color-2);
 }
-header nav {
+.nav {
   margin-right: 345px;
   margin-left: 93px;
   display: flex;
 }
-header nav > div {
+.nav__item {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.header-nav-link {
+.nav__link {
   text-decoration: none;
   color: var(--color-7);
   font-weight: 500;
@@ -66,21 +69,21 @@ header nav > div {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-header nav > div:not(:last-child) {
+.nav > div:not(:last-child) {
   margin-right: 46px;
 }
-.header-nav-link:hover,
-.header-nav-link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: var(--color-2);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-underline-mark {
+.nav__item--mark {
   position: relative;
 }
-.header-underline-mark > a {
+.nav__link--mark {
   color: var(--color-2);
 }
-.header-underline-mark::after {
+.nav__item--mark::after {
   content: "";
   position: absolute;
   display: block;
@@ -93,18 +96,14 @@ header nav > div:not(:last-child) {
   cursor: default;
   pointer-events: none;
 }
-header ul {
+.header-contact {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   grid-gap: 30px;
 }
-.header-icon {
-  fill: var(--color-3);
-  margin-right: 10px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.header-contact-link {
+
+.header-contact__link {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -116,13 +115,18 @@ header ul {
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-contact-link:hover .header-icon,
-.header-contact-link:focus .header-icon {
+.header-contact__icon {
+  fill: var(--color-3);
+  margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-contact__link:hover .header-contact__icon,
+.header-contact__link:focus .header-contact__icon {
   fill: var(--color-2);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-contact-link:hover,
-.header-contact-link:focus {
+.header-contact__link:hover,
+.header-contact__link:focus {
   color: var(--color-2);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -453,33 +457,23 @@ header ul {
   letter-spacing: 0.03em;
   color: var(--color-3);
 }
-footer {
+.footer {
   background-color: var(--color-1);
   padding-top: 60px;
   padding-bottom: 60px;
 }
-footer > div {
+.footer-grid {
   display: flex;
   justify-content: space-between;
 }
-.footer-logo {
-  display: block;
-  text-decoration: none;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  color: var(--color-6);
-  letter-spacing: 0.03em;
+.logo--footer {
+  color: white;
   margin-bottom: 20px;
 }
-.footer-logo > span {
-  color: var(--color-2);
-}
-.footer-address {
+.address {
   display: block;
 }
-.footer-address > span {
+.address__title {
   display: block;
   font-style: normal;
   font-size: 14px;
@@ -489,17 +483,15 @@ footer > div {
   text-decoration: none;
   margin-bottom: 9px;
 }
-.footer-address-mail {
+.address__mail {
   display: block;
-  text-decoration: none;
   color: var(--color-4);
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  text-decoration-line: underline;
   margin-bottom: 9px;
 }
-.footer-address-tel {
+.address__tel {
   display: block;
   text-decoration: none;
   color: var(--color-4);
@@ -507,18 +499,18 @@ footer > div {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.footer-address-mail:hover,
-.footer-address-mail:focus,
-.footer-address-tel:hover,
-.footer-address-tel:focus {
+.address__mail:hover,
+.address__mail:focus,
+.address__tel:hover,
+.address__tel:focus {
   color: var(--color-2);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-join-us {
+.join-us {
   margin-top: 12px;
   margin-left: 70px;
 }
-.footer-join-us > span {
+.join-us__title {
   display: block;
   font-weight: 700;
   font-size: 14px;
@@ -528,24 +520,24 @@ footer > div {
   color: var(--color-6);
   margin-bottom: 20px;
 }
-.footer-social-links {
+.join-us__grid {
   display: flex;
   justify-content: space-between;
   grid-gap: 10px;
   list-style: none;
 }
-.footer-social-links li {
+.join-us__item {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: #ffffff1a;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-social-links svg {
+.join-us__icon {
   fill: var(--color-6);
 }
-.footer-social-links li:hover,
-.footer-social-links li:focus {
+.join-us__item:hover,
+.join-us__item:focus {
   background-color: var(--color-2);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -553,12 +545,7 @@ footer > div {
   margin-top: 12px;
   margin-left: 78px;
 }
-.newsletter div {
-  display: flex;
-  justify-content: space-between;
-  grid-gap: 12px;
-}
-.newsletter label {
+.newsletter__title {
   display: block;
   margin-bottom: 20px;
   font-weight: 700;
@@ -568,7 +555,13 @@ footer > div {
   text-transform: uppercase;
   color: var(--color-6);
 }
-.newsletter input {
+.newsletter__grid {
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 12px;
+}
+
+.newsletter__input {
   width: 358px;
   height: 50px;
   border: 1px solid #ffffff4d;
@@ -580,13 +573,13 @@ footer > div {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
 }
-.newsletter input:hover,
-.newsletter input:focus {
+.newsletter__input:hover,
+.newsletter__input:focus {
   border-color: var(--color-2);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.newsletter button {
+.newsletter__button {
   display: flex;
   align-items: center;
   text-align: center;
@@ -605,13 +598,13 @@ footer > div {
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.newsletter svg {
+.newsletter__icon {
   fill: var(--color-6);
   margin-left: 24px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.newsletter button:hover,
-.newsletter button:focus {
+.newsletter__button:hover,
+.newsletter__button:focus {
   background-color: #f5f4fa;
   box-shadow: 0px 3px 1px #2196f31a, 0px 1px 2px #2196f314,
     0px 2px 2px #2196f31f;
@@ -620,8 +613,8 @@ footer > div {
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.newsletter button:hover svg,
-.newsletter button:focus svg {
+.newsletter__button:hover .newsletter__icon,
+.newsletter__button:focus .newsletter__icon {
   fill: var(--color-7);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

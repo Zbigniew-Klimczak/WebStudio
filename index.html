@@ -15,31 +15,33 @@
     />
   </head>
   <body>
-    <header>
-      <div class="container">
-        <a class="header-logo" href="index.html"><span>Web</span>Studio</a>
-        <nav>
-          <div class="header-underline-mark">
-            <a class="header-nav-link" href="index.html">Agencja</a>
+    <header class="header">
+      <div class="container header__grid">
+        <a class="logo logo--header" href="index.html"
+          ><span class="logo__color">Web</span>Studio</a
+        >
+        <nav class="nav">
+          <div class="nav__item nav__item--mark">
+            <a class="nav__link nav__link--mark" href="index.html">Agencja</a>
           </div>
-          <div>
-            <a class="header-nav-link" href="portfolio.html">Portfolio</a>
+          <div class="nav__item">
+            <a class="nav__link" href="portfolio.html">Portfolio</a>
           </div>
-          <div><a class="header-nav-link" href="">Kontakt</a></div>
+          <div class="nav__item"><a class="nav__link" href="">Kontakt</a></div>
         </nav>
 
-        <ul>
+        <ul class="header-contact">
           <li>
-            <a class="header-contact-link" href="mailto:info@devstudio.com"
-              ><svg class="header-icon" width="16px" height="12px">
+            <a class="header-contact__link" href="mailto:info@devstudio.com"
+              ><svg class="header-contact__icon" width="16px" height="12px">
                 <use href="./images/icons.svg#envelope"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
           <li>
-            <a class="header-contact-link" href="tel:+48111111111">
-              <svg class="header-icon" width="10px" height="16px">
+            <a class="header-contact__link" href="tel:+48111111111">
+              <svg class="header-contact__icon" width="10px" height="16px">
                 <use href="./images/icons.svg#smartphone"></use>
               </svg>
               +48 111 111 111
@@ -437,26 +439,28 @@
         </ul>
       </section>
     </main>
-    <footer>
-      <div class="container">
+    <footer class="footer">
+      <div class="container footer-grid">
         <div>
-          <a class="footer-logo" href="index.html"><span>Web</span>Studio</a>
-          <address class="footer-address">
-            <span>m. Warszawa, Aleje Jerozolimskie 21</span>
-            <a class="footer-address-mail" href="mailto:info@example.com"
+          <a class="logo logo--footer" href="index.html"
+            ><span class="logo__color">Web</span>Studio</a
+          >
+          <address class="address">
+            <span class="address__title"
+              >m. Warszawa, Aleje Jerozolimskie 21</span
+            >
+            <a class="address__mail" href="mailto:info@example.com"
               >info@example.com</a
             >
-            <a class="footer-address-tel" href="tel:+48111111111"
-              >+48 111 111 111</a
-            >
+            <a class="address__tel" href="tel:+48111111111">+48 111 111 111</a>
           </address>
         </div>
-        <div class="footer-join-us">
-          <span>Dołącz do nas</span>
-          <ul class="footer-social-links">
-            <li>
+        <div class="join-us">
+          <span class="join-us__title">Dołącz do nas</span>
+          <ul class="join-us__grid">
+            <li class="join-us__item">
               <a href="">
-                <svg width="44px" height="44px">
+                <svg class="join-us__icon" width="44px" height="44px">
                   <use
                     width="20px"
                     height="20px"
@@ -467,9 +471,9 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="join-us__item">
               <a href="">
-                <svg width="44px" height="44px">
+                <svg class="join-us__icon" width="44px" height="44px">
                   <use
                     width="20px"
                     height="20px"
@@ -480,9 +484,9 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="join-us__item">
               <a href="">
-                <svg width="44px" height="44px">
+                <svg class="join-us__icon" width="44px" height="44px">
                   <use
                     width="20px"
                     height="20px"
@@ -493,9 +497,9 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="join-us__item">
               <a href="">
-                <svg width="44px" height="44px">
+                <svg class="join-us__icon" width="44px" height="44px">
                   <use
                     width="20px"
                     height="20px"
@@ -510,18 +514,21 @@
         </div>
         <div class="newsletter">
           <form name="signup-form">
-            <label for="user-mail">Zapisz się do newslettera</label>
-            <div>
+            <label class="newsletter__title" for="user-mail"
+              >Zapisz się do newslettera</label
+            >
+            <div class="newsletter__grid">
               <input
+                class="newsletter__input"
                 type="email"
                 name="e-mail"
                 id="user-mail"
                 placeholder="E-mail"
                 required
               />
-              <button type="submit">
+              <button class="newsletter__button" type="submit">
                 Zapisz się
-                <svg width="24px" height="24px">
+                <svg class="newsletter__icon" width="24px" height="24px">
                   <use
                     width="24px"
                     height="24px"
