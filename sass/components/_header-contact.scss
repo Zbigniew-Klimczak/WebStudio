@@ -1,0 +1,25 @@
+.header-contact {
+  @include flex(row);
+  grid-gap: 30px;
+  &__icon {
+    fill: getColor("secondary");
+    margin-right: 10px;
+    transition: fill $transitionTimingPrimary;
+  }
+}
+.header-contact__link {
+  @include flex(row);
+  color: getColor("secondary");
+  @include mediumFonts();
+  transition: color $transitionTimingPrimary;
+  &:hover,
+  &:focus {
+    color: getColor("active");
+    transition: color $transitionTimingPrimary;
+  }
+  &:hover .header-contact__icon,
+  &:focus .header-contact__icon {
+    fill: getColor("active");
+    transition: fill $transitionTimingPrimary;
+  }
+}

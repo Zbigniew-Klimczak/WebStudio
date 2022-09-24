@@ -1,0 +1,41 @@
+.nav {
+  margin-right: 345px;
+  margin-left: 93px;
+  @include flex(row);
+}
+.nav__item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  &:not(:last-child) {
+    margin-right: 46px;
+  }
+  &--mark {
+    position: relative;
+  }
+  &--mark::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: getColor("active");
+    border-radius: 2px;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+.nav__link {
+  color: getColor("primary");
+  @include mediumFonts();
+  transition: color $transitionTimingPrimary;
+  &:hover,
+  &:focus {
+    color: getColor("active");
+    transition: color $transitionTimingPrimary;
+  }
+  &--mark {
+    color: getColor("active");
+  }
+}

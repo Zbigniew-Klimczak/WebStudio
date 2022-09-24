@@ -1,0 +1,35 @@
+.order {
+  background-color: getColor ("background-primary");
+  padding: 200px 452px 200px 452px;
+  background-image: linear-gradient(to bottom, #2f303a66 0%, #2f303a66 100%),
+    url("../images/order.jpg");
+  background-size: 1600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  &__heading {
+    @include heavyFonts();
+    text-align: center;
+    text-transform: uppercase;
+    color: getColor("tertiary");
+    margin-bottom: 30px;
+  }
+}
+.order__button {
+  font-family: "Roboto";
+  background-color: getColor("active");
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  border: none;
+  color: getColor("tertiary");
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 10px 41px 10px 42px;
+  transition: background-color var(--transition-timing-1),
+    color var(--transition-timing-1), box-shadow var(--transition-timing-1);
+}

@@ -1,0 +1,11 @@
+$colors: (
+  "primary": #212121,
+  "secondary": #757575,
+  "tertiary": #fff,
+  "active": #2196f3,
+  "logoHeader": #000,
+  "background-primary": #2f303a,
+);
+@function getColor($key) {
+  @return map-get($colors, $key);
+}

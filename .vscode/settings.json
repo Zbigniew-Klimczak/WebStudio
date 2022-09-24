@@ -3,15 +3,15 @@
     {
       "format": "expanded",
       "extensionName": ".css",
-      "savePath": "./../public/css"
+      "savePath": "/css"
     },
     {
-      "extensionName": ".min.css",
       "format": "compressed",
-      "savePath": "./../public/css"
+      "extensionName": ".min.css",
+      "savePath": "/css"
     }
   ],
-  "liveSassCompile.settings.excludeList": ["**/node_modules/**"],
+
   "liveSassCompile.settings.generateMap": true,
   "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"]
 }

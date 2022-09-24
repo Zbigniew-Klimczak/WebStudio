@@ -1,0 +1,11 @@
+.logo {
+  font-family: "Raleway";
+  display: block;
+  @include logoFonts();
+  &--header {
+    color: getColor("logoHeader");
+  }
+  &__color {
+    color: getColor("active");
+  }
+}
