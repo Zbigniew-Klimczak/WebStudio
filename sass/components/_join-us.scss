@@ -1,0 +1,11 @@
+.join-us {
+  margin-top: 12px;
+  margin-left: 70px;
+  &__title {
+    display: block;
+    @include mediumHeavyFonts;
+    text-transform: uppercase;
+    color: getColor("tertiary");
+    margin-bottom: 20px;
+  }
+}

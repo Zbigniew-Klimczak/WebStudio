@@ -1,0 +1,19 @@
+.address {
+  display: block;
+  @include lightFonts;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 9px;
+  &__title {
+    font-style: normal;
+    color: getColor("tertiary");
+  }
+}
+.address__link {
+  color: #ffffff99;
+  &:hover,
+  &:focus {
+    color: getColor("active");
+    transition: color $transitionTimingPrimary;
+  }
+}

@@ -1,0 +1,23 @@
+.what-we-do {
+  &__list {
+    @include flex(row);
+    gap: 30px;
+  }
+  &__position {
+    position: relative;
+  }
+  &__text {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include mediumHeavyFonts;
+    text-align: center;
+    text-transform: uppercase;
+    color: getColor("tertiary");
+    background-color: rgba(47, 48, 58, 0.8);
+    padding: 27px 0;
+    width: 370px;
+    height: 70px;
+  }
+}

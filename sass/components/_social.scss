@@ -1,0 +1,33 @@
+.social {
+  @include flex(row);
+  grid-gap: 10px;
+}
+.social__link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: fill $transitionTimingPrimary,
+    background-color $transitionTimingPrimary;
+  &:hover,
+  &:focus {
+    transition: fill $transitionTimingPrimary,
+      background-color $transitionTimingPrimary;
+  }
+}
+.social__link--our-team {
+  margin-top: 16px;
+  fill: getColor("quaternary");
+  &:hover,
+  &:focus {
+    fill: getColor("tertiary");
+    background-color: getColor("active");
+  }
+}
+.social__link--join-us {
+  background-color: #ffffff1a;
+  fill: getColor("tertiary");
+  &:hover,
+  &:focus {
+    background-color: getColor("active");
+  }
+}

@@ -1,0 +1,28 @@
+.our-team {
+  &__list {
+    @include flex(row);
+    gap: 30px;
+    object-fit: contain;
+  }
+  &__figure {
+    background: getColor("tertiary");
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 1px 3px #0000001f, 0px 1px 1px #00000024,
+      0px 2px 1px #00000033;
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__description {
+    padding: 30px 32px;
+  }
+  &__name {
+    @include mediumSecondaryFonts;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__profession {
+    @include lightSecondaryFonts;
+    text-align: center;
+    color: getColor("secondary");
+  }
+}

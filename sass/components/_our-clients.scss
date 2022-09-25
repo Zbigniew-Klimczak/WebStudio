@@ -1,0 +1,29 @@
+.our-clients {
+  &__list {
+    @include flex(row);
+    grid-gap: 30px;
+  }
+  &__link {
+    display: block;
+    border: 1px solid getColor("quaternary");
+    border-radius: 4px;
+    padding: 17.71px 32px 14.25px;
+    transition: $transitionTimingPrimary;
+  }
+  &__icon {
+    fill: getColor("quaternary");
+    transition: fill $transitionTimingPrimary;
+  }
+}
+.our-clients__link {
+  &:hover,
+  &:focus {
+    border-color: getColor("active");
+    transition: border-color $transitionTimingPrimary;
+  }
+  &:hover .our-clients__icon,
+  &:focus .our-clients__icon {
+    fill: getColor("active");
+    transition: fill $transitionTimingPrimary;
+  }
+}

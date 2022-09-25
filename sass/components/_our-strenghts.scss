@@ -1,0 +1,22 @@
+.our-strenghts {
+  padding-bottom: 0;
+  &__list {
+    @include flex(row);
+    gap: 30px;
+  }
+  &__image {
+    background-color: getColor("button");
+    border-radius: 4px;
+    margin-bottom: 30px;
+    padding: 25px 100px;
+  }
+  &__heading {
+    @include mediumHeavyFonts();
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &__text {
+    @include lightFonts();
+    color: getColor("secondary");
+  }
+}

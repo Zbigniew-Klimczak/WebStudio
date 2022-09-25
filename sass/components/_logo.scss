@@ -5,6 +5,10 @@
   &--header {
     color: getColor("logoHeader");
   }
+  &--footer {
+    color: getColor("tertiary");
+    margin-bottom: 20px;
+  }
   &__color {
     color: getColor("active");
   }

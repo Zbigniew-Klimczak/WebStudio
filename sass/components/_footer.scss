@@ -1,0 +1,8 @@
+.footer {
+  background-color: getColor("background-primary");
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__grid {
+    @include flex(row);
+  }
+}

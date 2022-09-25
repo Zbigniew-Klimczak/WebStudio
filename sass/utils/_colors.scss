@@ -1,10 +1,15 @@
+$buttonShadowPrimary: 0px 3px 1px #2196f31a, 0px 1px 2px #2196f314,
+  0px 2px 2px #2196f31f;
 $colors: (
   "primary": #212121,
   "secondary": #757575,
   "tertiary": #fff,
+  "quaternary": #afb1b8,
   "active": #2196f3,
   "logoHeader": #000,
   "background-primary": #2f303a,
+  "background-secondary": #f5f4fa,
+  "border-primary": #eeeeee,
 );
 @function getColor($key) {
   @return map-get($colors, $key);
