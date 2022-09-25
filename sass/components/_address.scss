@@ -1,8 +1,7 @@
 .address {
   display: block;
   @include lightFonts;
-  display: flex;
-  flex-direction: column;
+  @include flexSecondary;
   grid-gap: 9px;
   &__title {
     font-style: normal;

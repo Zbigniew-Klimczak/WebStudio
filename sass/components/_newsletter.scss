@@ -10,6 +10,7 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 20px;
+    cursor: text;
   }
   &__grid {
     @include flex(row);

@@ -4,3 +4,7 @@
   align-items: center;
   flex-direction: &direction;
 }
+@mixin flexSecondary() {
+  display: flex;
+  flex-direction: column;
+}
