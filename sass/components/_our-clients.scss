@@ -3,14 +3,23 @@
 @use "../utils/transitions" as tTiming;
 .our-clients {
   &__list {
-    @include flex.primary(row);
-    grid-gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  &__element {
+    flex-basis: calc((100% - 30px) / 2);
   }
   &__link {
+    width: 100%;
     display: block;
+    @include flex.tertiary(row);
     border: 1px solid color.get("quaternary");
     border-radius: 4px;
-    padding: 17.71px 32px 14.25px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     transition: tTiming.$primary;
   }
   &__icon {

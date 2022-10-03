@@ -10,6 +10,7 @@
     margin-right: 10px;
     transition: fill tTiming.$primary;
   }
+  display: none;
 }
 .header-contact__link {
   @include flex.primary(row);

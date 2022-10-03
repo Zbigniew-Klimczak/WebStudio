@@ -1,6 +1,15 @@
+@use "../utils/mixins" as flex;
 .sort {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  column-gap: 8px;
+  margin-bottom: 40px;
+  &__element {
+    width: 100%;
+    flex-basis: calc((100% - 16px) / 3);
+    @include flex.tertiary(row);
+  }
 }

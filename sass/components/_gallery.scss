@@ -4,16 +4,20 @@
 @use "../utils/transitions" as tTiming;
 .gallery {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
+
   &__hidden-text {
     position: absolute;
     display: block;
+    @include flex.tertiary(row);
     top: 0;
     left: 0;
-    width: 370px;
-    height: 294px;
-    padding: 49px 45px 49px 24px;
+    width: 100%;
+    height: 78%;
+    padding-left: 5%;
+    padding-right: 5%;
     background-color: #2196f3e6;
     font-size: 18px;
     line-height: 1.56;
@@ -40,6 +44,7 @@
   }
 }
 .gallery__list {
+  width: 100%;
   transition: box-shadow tTiming.$primary;
   &:hover,
   &:focus {

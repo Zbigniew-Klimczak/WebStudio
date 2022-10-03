@@ -6,6 +6,7 @@
   margin-right: 345px;
   margin-left: 93px;
   @include flex.primary(row);
+  display: none;
 }
 .nav__item {
   padding-top: 32px;

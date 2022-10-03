@@ -48,6 +48,9 @@
             </a>
           </li>
         </ul>
+        <svg class="header__icon" width="24px" height="16px">
+          <use href="./images/icons.svg#menu-icon"></use>
+        </svg>
       </div>
     </header>
     <main>
@@ -151,13 +154,12 @@
         <section class="container section our-team">
           <h2 class="section__heading">Nasz zespół</h2>
           <ul class="our-team__list">
-            <li>
+            <li class="our-team__list-element">
               <figure class="our-team__figure">
                 <img
                   src="images/person-1.jpg"
                   alt="Smiling man with glasses and a short beard in a maroon shirt."
-                  height="260"
-                  width="270"
+                  
                 />
                 <figcaption class="our-team__description">
                   <h4 class="our-team__name">John Doe</h4>
@@ -212,13 +214,12 @@
                 </figcaption>
               </figure>
             </li>
-            <li>
+            <li class="our-team__list-element">
               <figure class="our-team__figure">
                 <img
                   src="images/person-2.jpg"
                   alt="Smiling woman with glasses and blonde hair in a black jacket."
-                  height="260"
-                  width="270"
+                  
                 />
                 <figcaption class="our-team__description">
                   <h4 class="our-team__name">John Doe</h4>
@@ -273,13 +274,12 @@
                 </figcaption>
               </figure>
             </li>
-            <li>
+            <li class="our-team__list-element">
               <figure class="our-team__figure">
                 <img
                   src="images/person-3.jpg"
                   alt="Smiling man in a light-colored shirt."
-                  height="260"
-                  width="270"
+                  
                 />
                 <figcaption class="our-team__description">
                   <h4 class="our-team__name">John Doe</h4>
@@ -334,13 +334,12 @@
                 </figcaption class="our-team__description">
               </figure>
             </li>
-            <li>
+            <li class="our-team__list-element">
               <figure class="our-team__figure">
                 <img
                   src="images/person-4.jpg"
                   alt="Smiling an with glasses and a short beard in a black t-shirt"
-                  height="260"
-                  width="270"
+                  
                 />
                 <figcaption  class="our-team__description">
                   <h4 class="our-team__name">John Doe</h4>
@@ -449,10 +448,11 @@
     <footer class="footer" id="bottom">
       <div class="container footer__grid">
         <div>
-          <a class="logo logo--footer" href="index.html"
+         
+          <address class="address">
+            <a class="logo logo--footer" href="index.html"
             ><span class="logo__color">Web</span>Studio</a
           >
-          <address class="address">
             <span class="address__title"
               >m. Warszawa, Aleje Jerozolimskie 21</span
             >
@@ -641,5 +641,6 @@
       </div>
     </div>
     <script src="modal.js"></script>
+    <script src="mobile-menu.js"></script>
   </body>
 </html>

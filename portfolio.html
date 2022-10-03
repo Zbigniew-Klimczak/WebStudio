@@ -21,13 +21,11 @@
           ><span class="logo__color">Web</span>Studio</a
         >
         <nav class="nav">
-          <div class="nav__item">
-            <a class="nav__link" href="index.html">Agencja</a>
-          </div>
           <div class="nav__item nav__item--mark">
-            <a class="nav__link nav__link--mark" href="portfolio.html"
-              >Portfolio</a
-            >
+            <a class="nav__link nav__link--mark" href="index.html">Agencja</a>
+          </div>
+          <div class="nav__item">
+            <a class="nav__link" href="portfolio.html">Portfolio</a>
           </div>
           <div class="nav__item">
             <a class="nav__link" href="#bottom">Kontakt</a>
@@ -52,29 +50,32 @@
             </a>
           </li>
         </ul>
+        <svg class="header__icon" width="24px" height="16px">
+          <use href="./images/icons.svg#menu-icon"></use>
+        </svg>
       </div>
     </header>
     <main>
       <section class="section">
         <div class="container">
           <ul class="sort">
-            <li>
+            <li class="sort__element">
               <button class="button button--sort" type="button">
                 Wszystkie
               </button>
             </li>
-            <li>
+            <li class="sort__element">
               <button class="button button--sort" type="button">Strony</button>
             </li>
-            <li>
+            <li class="sort__element">
               <button class="button button--sort" type="button">
                 Aplikacje
               </button>
             </li>
-            <li>
+            <li class="sort__element">
               <button class="button button--sort" type="button">Design</button>
             </li>
-            <li>
+            <li class="sort__element">
               <button class="button button--sort" type="button">
                 Marketing
               </button>
@@ -87,15 +88,15 @@
                 <img
                   src="images/portfolio-1.jpg"
                   alt="Front of the notebook with opened page"
-                  height="294"
-                  width="370"
                 />
+
                 <p class="gallery__hidden-text">
                   Technocrack jest popularną platformą wykorzystywaną do
                   rozpowszechniania koronawirusa. Firmy wykorzystują tę
                   platformę do celów szpiegowskich i ataków na niezabezpieczone
                   serwery konkurencji
                 </p>
+
                 <figcaption class="gallery__description">
                   <h3 class="gallery__description-heading">Technocrack</h3>
                   <span class="gallery__description-text"
@@ -106,12 +107,7 @@
             </li>
             <li class="gallery__list">
               <figure class="gallery__figure">
-                <img
-                  src="images/portfolio-2.jpg"
-                  alt="Basketball drawing"
-                  height="294"
-                  width="370"
-                />
+                <img src="images/portfolio-2.jpg" alt="Basketball drawing" />
                 <p class="gallery__hidden-text">
                   Technocrack jest popularną platformą wykorzystywaną do
                   rozpowszechniania koronawirusa. Firmy wykorzystują tę
@@ -132,8 +128,6 @@
                 <img
                   src="images/portfolio-3.jpg"
                   alt="Seafood restaurant logo"
-                  height="294"
-                  width="370"
                 />
                 <p class="gallery__hidden-text">
                   Technocrack jest popularną platformą wykorzystywaną do
@@ -151,12 +145,7 @@
             </li>
             <li class="gallery__list">
               <figure class="gallery__figure">
-                <img
-                  src="images/portfolio-4.jpg"
-                  alt="Black headphones"
-                  height="294"
-                  width="370"
-                />
+                <img src="images/portfolio-4.jpg" alt="Black headphones" />
                 <p class="gallery__hidden-text">
                   Technocrack jest popularną platformą wykorzystywaną do
                   rozpowszechniania koronawirusa. Firmy wykorzystują tę
@@ -174,8 +163,6 @@
                 <img
                   src="images/portfolio-5.jpg"
                   alt="Two boxes, white and brown"
-                  height="294"
-                  width="370"
                 />
                 <p class="gallery__hidden-text">
                   Technocrack jest popularną platformą wykorzystywaną do
@@ -194,8 +181,6 @@
                 <img
                   src="images/portfolio-6.jpg"
                   alt="Monitor with opened page"
-                  height="294"
-                  width="370"
                 />
                 <p class="gallery__hidden-text">
                   Technocrack jest popularną platformą wykorzystywaną do
@@ -215,12 +200,7 @@
             </li>
             <li class="gallery__list">
               <figure class="gallery__figure">
-                <img
-                  src="images/portfolio-7.jpg"
-                  alt="Opened book"
-                  height="294"
-                  width="370"
-                />
+                <img src="images/portfolio-7.jpg" alt="Opened book" />
                 <p class="gallery__hidden-text">
                   Technocrack jest popularną platformą wykorzystywaną do
                   rozpowszechniania koronawirusa. Firmy wykorzystują tę
@@ -237,12 +217,7 @@
             </li>
             <li class="gallery__list">
               <figure class="gallery__figure">
-                <img
-                  src="images/portfolio-8.jpg"
-                  alt="Lab logo pendant"
-                  height="294"
-                  width="370"
-                />
+                <img src="images/portfolio-8.jpg" alt="Lab logo pendant" />
                 <p class="gallery__hidden-text">
                   Technocrack jest popularną platformą wykorzystywaną do
                   rozpowszechniania koronawirusa. Firmy wykorzystują tę
@@ -260,8 +235,6 @@
                 <img
                   src="images/portfolio-9.jpg"
                   alt="Hands writing on a notebook"
-                  height="294"
-                  width="370"
                 />
                 <p class="gallery__hidden-text">
                   Technocrack jest popularną platformą wykorzystywaną do
@@ -282,10 +255,10 @@
     <footer class="footer" id="bottom">
       <div class="container footer__grid">
         <div>
-          <a class="logo logo--footer" href="index.html"
-            ><span class="logo__color">Web</span>Studio</a
-          >
           <address class="address">
+            <a class="logo logo--footer" href="index.html"
+              ><span class="logo__color">Web</span>Studio</a
+            >
             <span class="address__title"
               >m. Warszawa, Aleje Jerozolimskie 21</span
             >
@@ -374,5 +347,6 @@
         </div>
       </div>
     </footer>
+    <script src="mobile-menu.js"></script>
   </body>
 </html>

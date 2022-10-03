@@ -8,21 +8,21 @@
 body {
   font-family: "Roboto", "Raleway", sans-serif;
   color: color color.get("primary");
-  min-width: 1600px;
+  min-width: 320px;
 }
 .container {
-  width: 1200px;
+  min-width: 320px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   &__heading {
     @include font.heading;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 .background {

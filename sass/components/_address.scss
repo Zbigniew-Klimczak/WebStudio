@@ -5,8 +5,9 @@
 .address {
   display: block;
   @include font.light;
-  @include flex.secondary;
-  grid-gap: 9px;
+  @include flex.tertiary(column);
+  gap: 9px;
+  font-style: normal;
   &__title {
     font-style: normal;
     color: color.get("tertiary");

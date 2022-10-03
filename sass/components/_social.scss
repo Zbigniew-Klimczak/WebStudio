@@ -2,7 +2,7 @@
 @use "../utils/mixins" as flex;
 @use "../utils/transitions" as tTiming;
 .social {
-  @include flex.primary(row);
+  @include flex.tertiary(row);
   grid-gap: 10px;
 }
 .social__link {

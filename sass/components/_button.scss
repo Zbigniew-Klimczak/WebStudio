@@ -8,7 +8,7 @@
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  @include flex.primary(row);
+  @include flex.tertiary(row);
   transition: background-color tTiming.$primary, color tTiming.$primary,
     box-shadow tTiming.$primary;
   &:focus,
@@ -32,9 +32,11 @@
   }
 }
 .button--sort {
+  width: 100%;
   background-color: color.get("background-secondary");
   @include font.buttonSecondary;
-  padding: 6px 22px 6px 22px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   &:focus,
   &:hover {
     color: color.get("tertiary");

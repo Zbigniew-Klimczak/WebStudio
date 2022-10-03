@@ -2,24 +2,26 @@
 @use "../utils/colors" as color;
 @use "../utils/mixins" as flex;
 .our-strenghts {
-  padding-bottom: 0;
   &__list {
-    @include flex.primary(row);
+    @include flex.tertiary(column);
     gap: 30px;
   }
   &__image {
+    @include flex.tertiary(row);
     background-color: color.get("background-secondary");
     border-radius: 4px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     margin-bottom: 30px;
-    padding: 25px 100px;
   }
   &__heading {
     @include font.mediumHeavy();
     text-transform: uppercase;
+    text-align: center;
     margin-bottom: 10px;
   }
   &__text {
     @include font.light();
-    color: getColor("secondary");
+    color: color.get("secondary");
   }
 }
