@@ -1,7 +1,11 @@
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
+@use "../utils/mixins" as flex;
+@use "../utils/transitions" as tTiming;
 .nav {
   margin-right: 345px;
   margin-left: 93px;
-  @include flex(row);
+  @include flex.primary(row);
 }
 .nav__item {
   padding-top: 32px;
@@ -20,22 +24,22 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: getColor("active");
+    background-color: color.get("active");
     border-radius: 2px;
     cursor: default;
     pointer-events: none;
   }
 }
 .nav__link {
-  color: getColor("primary");
-  @include mediumFonts();
-  transition: color $transitionTimingPrimary;
+  color: color.get("primary");
+  @include font.medium();
+  transition: color tTiming.$primary;
   &:hover,
   &:focus {
-    color: getColor("active");
-    transition: color $transitionTimingPrimary;
+    color: color.get("active");
+    transition: color tTiming.$primary;
   }
   &--mark {
-    color: getColor("active");
+    color: color.get("active");
   }
 }

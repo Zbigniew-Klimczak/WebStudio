@@ -1,22 +1,25 @@
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
+@use "../utils/mixins" as flex;
 .our-strenghts {
   padding-bottom: 0;
   &__list {
-    @include flex(row);
+    @include flex.primary(row);
     gap: 30px;
   }
   &__image {
-    background-color: getColor("background-secondary");
+    background-color: color.get("background-secondary");
     border-radius: 4px;
     margin-bottom: 30px;
     padding: 25px 100px;
   }
   &__heading {
-    @include mediumHeavyFonts();
+    @include font.mediumHeavy();
     text-transform: uppercase;
     margin-bottom: 10px;
   }
   &__text {
-    @include lightFonts();
+    @include font.light();
     color: getColor("secondary");
   }
 }

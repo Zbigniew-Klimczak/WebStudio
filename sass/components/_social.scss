@@ -1,33 +1,34 @@
+@use "../utils/colors" as color;
+@use "../utils/mixins" as flex;
+@use "../utils/transitions" as tTiming;
 .social {
-  @include flex(row);
+  @include flex.primary(row);
   grid-gap: 10px;
 }
 .social__link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition: fill $transitionTimingPrimary,
-    background-color $transitionTimingPrimary;
+  transition: fill tTiming.$primary, background-color tTiming.$primary;
   &:hover,
   &:focus {
-    transition: fill $transitionTimingPrimary,
-      background-color $transitionTimingPrimary;
+    transition: fill tTiming.$primary, background-color tTiming.$primary;
   }
 }
 .social__link--our-team {
   margin-top: 16px;
-  fill: getColor("quaternary");
+  fill: color.get("quaternary");
   &:hover,
   &:focus {
-    fill: getColor("tertiary");
-    background-color: getColor("active");
+    fill: color.get("tertiary");
+    background-color: color.get("active");
   }
 }
 .social__link--join-us {
   background-color: #ffffff1a;
-  fill: getColor("tertiary");
+  fill: color.get("tertiary");
   &:hover,
   &:focus {
-    background-color: getColor("active");
+    background-color: color.get("active");
   }
 }

@@ -1,11 +1,14 @@
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
+
 .join-us {
   margin-top: 12px;
   margin-left: 70px;
   &__title {
     display: block;
-    @include mediumHeavyFonts;
+    @include font.mediumHeavy;
     text-transform: uppercase;
-    color: getColor("tertiary");
+    color: color.get("tertiary");
     margin-bottom: 20px;
   }
 }

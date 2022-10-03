@@ -1,69 +1,74 @@
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
+@use "../utils/mixins" as flex;
+@use "../utils/transitions" as tTiming;
+@use "../utils/shadows" as shadow;
 .button {
   font-family: "Roboto";
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  @include flex(row);
-  transition: background-color $transitionTimingPrimary,
-    color $transitionTimingPrimary, box-shadow $transitionTimingPrimary;
+  @include flex.primary(row);
+  transition: background-color tTiming.$primary, color tTiming.$primary,
+    box-shadow tTiming.$primary;
   &:focus,
   &:hover {
-    transition: background-color $transitionTimingPrimary,
-      color $transitionTimingPrimary, box-shadow $transitionTimingPrimary;
+    transition: background-color tTiming.$primary, color tTiming.$primary,
+      box-shadow tTiming.$primary;
   }
 }
 .button--order {
-  background-color: getColor("active");
+  background-color: color.get("active");
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  @include buttonPrimaryFonts();
-  color: getColor("tertiary");
+  @include font.buttonPrimary();
+  color: color.get("tertiary");
   margin: 0 auto;
   padding: 10px 41px 10px 42px;
   &:focus,
   &:hover {
-    color: getColor("primary");
-    background-color: getColor("background-secondary");
-    box-shadow: $buttonShadowPrimary;
+    color: color.get("primary");
+    background-color: color.get("background-secondary");
+    box-shadow: shadow.$buttonPrimary;
   }
 }
 .button--sort {
-  background-color: getColor("background-secondary");
-  @include buttonSecondaryFonts;
+  background-color: color.get("background-secondary");
+  @include font.buttonSecondary;
   padding: 6px 22px 6px 22px;
   &:focus,
   &:hover {
-    color: getColor("tertiary");
-    background-color: getColor("active");
+    color: color.get("tertiary");
+    background-color: color.get("active");
     box-shadow: 0px 3px 1px #0000001a, 0px 1px 2px #00000014,
       0px 2px 2px #0000001f;
   }
 }
 .button--newsletter {
-  color: getColor("tertiary");
-  background-color: getColor("active");
+  color: color.get("tertiary");
+  background-color: color.get("active");
   box-shadow: 0px 4px 4px #00000026;
-  @include buttonPrimaryFonts;
+  @include font.buttonPrimary;
   padding: 10px 28px 10px 42px;
   &:hover,
   &:focus {
-    color: getColor("primary");
-    background-color: getColor("background-secondary");
-    box-shadow: $buttonShadowPrimary;
+    color: color.get("primary");
+    background-color: color.get("background-secondary");
+    box-shadow: shadow.$buttonPrimary;
   }
 }
 .button--contact-form {
   display: block;
-  @include buttonPrimaryFonts;
-  color: getColor("tertiary");
-  background: getColor("active");
+  @include font.buttonPrimary;
+  color: color.get("tertiary");
+  background: color.get("active");
   box-shadow: 0px 4px 4px #00000026;
   padding: 10px 76px;
   margin: 0 auto;
   margin-top: 30px;
   &:hover,
   &:focus {
-    background-color: getColor("background-secondary");
-    box-shadow: $buttonShadowPrimary;
-    color: getColor("primary");
+    background-color: color.get("background-secondary");
+    box-shadow: shadow.$buttonPrimary;
+    color: color.get("primary");
   }
 }

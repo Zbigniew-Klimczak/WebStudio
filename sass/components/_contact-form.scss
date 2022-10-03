@@ -1,3 +1,7 @@
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
+@use "../utils/mixins" as flex;
+@use "../utils/transitions" as tTiming;
 .contact-form {
   &__grid {
     display: flex;
@@ -12,7 +16,7 @@
     font-size: 12px;
     line-height: 1.21;
     letter-spacing: 0.01em;
-    color: getColor("secondary");
+    color: color.get("secondary");
     margin-top: 10px;
     margin-bottom: 4px;
   }
@@ -25,8 +29,8 @@
     position: absolute;
     top: 13px;
     left: 14px;
-    fill: getColor("primary");
-    transition: fill $transitionTimingPrimary;
+    fill: color.get("primary");
+    transition: fill tTiming.$primary;
     z-index: -1;
   }
 }
@@ -37,16 +41,16 @@
   border-radius: 4px;
   background-color: transparent;
   padding: 12px 42px;
-  transition: border-color $transitionTimingPrimary;
+  transition: border-color tTiming.$primary;
   outline: none;
   &:hover,
   &:focus {
-    border-color: getColor("active");
-    transition: border-color $transitionTimingPrimary;
+    border-color: color.get("active");
+    transition: border-color tTiming.$primary;
     & + .contact-form__block-icon,
     & + .contact-form__block-icon {
-      fill: getColor("active");
-      transition: fill $transitionTimingPrimary;
+      fill: color.get("active");
+      transition: fill tTiming.$primary;
     }
   }
 }
@@ -56,18 +60,18 @@
   border: 1px solid #21212133;
   border-radius: 4px;
   padding: 12px 16px;
-  transition: border-color $transitionTimingPrimary;
+  transition: border-color tTiming.$primary;
   outline: none;
   resize: none;
   &:focus,
   &:hover {
-    border-color: getColor("active");
-    transition: border-color $transitionTimingPrimary;
+    border-color: color.get("active");
+    transition: border-color tTiming.$primary;
   }
 }
 .contact-form__agreements {
   position: relative;
-  @include flex(row);
+  @include flex.primary(row);
   margin: 14px;
 }
 .contact-form__agreements-input {
@@ -79,21 +83,19 @@
   border: 2px solid #212121;
   border-radius: 2px;
   cursor: pointer;
-  transition: background-color $transitionTimingPrimary,
-    border-color $transitionTimingPrimary;
+  transition: background-color tTiming.$primary, border-color tTiming.$primary;
   &:focus,
   &:hover {
-    border-color: getColor("active");
-    transition: border-color $transitionTimingPrimary;
+    border-color: color.get("active");
+    transition: border-color tTiming.$primary;
   }
   &:checked {
-    background-color: getColor("active");
-    border-color: getColor("active");
-    transition: background-color $transitionTimingPrimary,
-      border-color $transitionTimingPrimary;
+    background-color: color.get("active");
+    border-color: color.get("active");
+    transition: background-color tTiming.$primary, border-color tTiming.$primary;
     & + .contact-form__agreements-svg {
       opacity: 1;
-      transition: opacity $transitionTimingPrimary;
+      transition: opacity tTiming.$primary;
     }
   }
 }
@@ -103,16 +105,16 @@
     opacity: 0;
     top: 6px;
     left: 0;
-    fill: getColor("tertiary");
+    fill: color.get("tertiary");
     pointer-events: none;
-    transition: opacity $transitionTimingPrimary;
+    transition: opacity tTiming.$primary;
   }
   &__agreements-label {
-    @include lightFonts;
-    color: getColor("secondary");
+    @include font.light;
+    color: color.get("secondary");
     text-align: center;
   }
   &__agreements-a {
-    color: getColor("active");
+    color: color.get("active");
   }
 }

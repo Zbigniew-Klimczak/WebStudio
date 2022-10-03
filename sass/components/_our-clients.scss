@@ -1,29 +1,32 @@
+@use "../utils/colors" as color;
+@use "../utils/mixins" as flex;
+@use "../utils/transitions" as tTiming;
 .our-clients {
   &__list {
-    @include flex(row);
+    @include flex.primary(row);
     grid-gap: 30px;
   }
   &__link {
     display: block;
-    border: 1px solid getColor("quaternary");
+    border: 1px solid color.get("quaternary");
     border-radius: 4px;
     padding: 17.71px 32px 14.25px;
-    transition: $transitionTimingPrimary;
+    transition: tTiming.$primary;
   }
   &__icon {
-    fill: getColor("quaternary");
-    transition: fill $transitionTimingPrimary;
+    fill: color.get("quaternary");
+    transition: fill tTiming.$primary;
   }
 }
 .our-clients__link {
   &:hover,
   &:focus {
-    border-color: getColor("active");
-    transition: border-color $transitionTimingPrimary;
+    border-color: color.get("active");
+    transition: border-color tTiming.$primary;
   }
   &:hover .our-clients__icon,
   &:focus .our-clients__icon {
-    fill: getColor("active");
-    transition: fill $transitionTimingPrimary;
+    fill: color.get("active");
+    transition: fill tTiming.$primary;
   }
 }

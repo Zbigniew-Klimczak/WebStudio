@@ -1,6 +1,7 @@
+@use "../utils/mixins" as flex;
 .header {
   border-bottom: 1px solid #ececec;
   &__grid {
-    @include flex(row);
+    @include flex.primary(row);
   }
 }

@@ -1,3 +1,6 @@
+@use "../utils/colors" as color;
+
+@use "../utils/transitions" as tTiming;
 .backdrop {
   position: fixed;
   width: 100%;
@@ -16,7 +19,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: getColor("tertiary");
+    background-color: color.get("tertiary");
     box-shadow: 0px 1px 3px #0000001f, 0px 1px 1px #00000024,
       0px 2px 1px #00000033;
     border-radius: 4px;
@@ -40,15 +43,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: getColor("tertiary");
+  background-color: color.get("tertiary");
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
-  transition: border-color $transitionTimingPrimary;
+  transition: border-color tTiming.$primary;
   &:focus,
   &:hover {
-    border-color: getColor("active");
-    transition: border-color $transitionTimingPrimary;
+    border-color: color.get("active");
+    transition: border-color tTiming.$primary;
   }
   &__icon {
     fill: #000;

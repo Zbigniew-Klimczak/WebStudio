@@ -1,18 +1,22 @@
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
+@use "../utils/mixins" as flex;
+@use "../utils/transitions" as tTiming;
 .address {
   display: block;
-  @include lightFonts;
-  @include flexSecondary;
+  @include font.light;
+  @include flex.secondary;
   grid-gap: 9px;
   &__title {
     font-style: normal;
-    color: getColor("tertiary");
+    color: color.get("tertiary");
   }
 }
 .address__link {
   color: #ffffff99;
   &:hover,
   &:focus {
-    color: getColor("active");
-    transition: color $transitionTimingPrimary;
+    color: color.get("active");
+    transition: color tTiming.$primary;
   }
 }

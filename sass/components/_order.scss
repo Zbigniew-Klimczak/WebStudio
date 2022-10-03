@@ -1,5 +1,7 @@
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
 .order {
-  background-color: getColor("background-primary");
+  background-color: color.get("background-primary");
   padding: 200px 452px 200px 452px;
   background-image: linear-gradient(to bottom, #2f303a66 0%, #2f303a66 100%),
     url("../images/order.jpg");
@@ -7,10 +9,10 @@
   background-repeat: no-repeat;
   background-position: center;
   &__heading {
-    @include heavyFonts();
+    @include font.heavy();
     text-align: center;
     text-transform: uppercase;
-    color: getColor("tertiary");
+    color: color.get("tertiary");
     margin-bottom: 30px;
   }
 }

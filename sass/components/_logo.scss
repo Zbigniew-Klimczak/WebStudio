@@ -1,15 +1,17 @@
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
 .logo {
   font-family: "Raleway";
   display: block;
-  @include logoFonts();
+  @include font.logo();
   &--header {
-    color: getColor("logoHeader");
+    color: color.get("logoHeader");
   }
   &--footer {
-    color: getColor("tertiary");
+    color: color.get("tertiary");
     margin-bottom: 20px;
   }
   &__color {
-    color: getColor("active");
+    color: color.get("active");
   }
 }
