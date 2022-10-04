@@ -48,7 +48,7 @@
             </a>
           </li>
         </ul>
-        <svg class="header__icon" width="24px" height="16px">
+        <svg class="header__icon js-open-menu" width="24px" height="16px" >
           <use href="./images/icons.svg#menu-icon"></use>
         </svg>
       </div>
@@ -65,7 +65,7 @@
 
       <section class="container section our-strenghts">
         <ul class="our-strenghts__list">
-          <li>
+          <li class="our-strenghts__element">
             <div class="our-strenghts__image">
               <svg width="70px" height="70px">
                 <use href="./images/icons.svg#icon-antenna-1"></use>
@@ -77,7 +77,7 @@
               arcu sem. Sed non sodales dui. Interdum et malesuada
             </p>
           </li>
-          <li>
+          <li class="our-strenghts__element">
             <div class="our-strenghts__image">
               <svg width="70px" height="70px">
                 <use href="./images/icons.svg#icon-clock-1"></use>
@@ -89,7 +89,7 @@
               arcu sem. Sed non sodales dui. Interdum et malesuada
             </p>
           </li>
-          <li>
+          <li class="our-strenghts__element">
             <div class="our-strenghts__image">
               <svg width="70px" height="70px">
                 <use href="./images/icons.svg#icon-diagram-1"></use>
@@ -101,7 +101,7 @@
               arcu sem. Sed non sodales dui. Interdum et malesuada
             </p>
           </li>
-          <li>
+          <li class="our-strenghts__element">
             <div class="our-strenghts__image">
               <svg width="70px" height="70px">
                 <use href="./images/icons.svg#icon-astronaut-1"></use>
@@ -616,7 +616,7 @@
                 width="11px"
                 height="8px"
                 x="2.5"
-                y="1.5"
+                y="2"
                 href="./images/icons.svg#mark-icon"
               ></use>
             </svg>
@@ -628,7 +628,7 @@
           <button class="button button--contact-form" type="submit">Wyślij</button>
         </form>
         <button class="close-button" type="button" data-modal-close>
-          <svg class="lose-button__icon" width="30px" height="30px">
+          <svg class="close-button__icon" width="30px" height="30px">
             <use
               x="8"
               y="9"
@@ -640,7 +640,43 @@
         </button>
       </div>
     </div>
+    <div class="mobile-menu js-menu-container" >
+      <ul class="mobile-menu__nav">
+        <li class="mobile-menu__nav-element mobile-menu__nav-element--active"><a href="index.html">Agencja</a></li>
+        <li class="mobile-menu__nav-element"><a href="portfolio.html">Portfolio</a></li>
+      <li class="mobile-menu__nav-element"><a href="#bottom">Kontakt</a></li>
+      </ul>
+      <div class="mobile-menu__grid">
+      <ul class="mobile-menu__contact">
+        <li class="mobile-menu__phone"><a href="tel:+48111111111">+48 111 111 111</a></li>
+        <li class="mobile-menu__email"><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+      </ul>
+      <ul class="mobile-menu__social">
+        <li class="mobile-menu__social-element"><a href="">Instagram</a></li>
+        <li class="mobile-menu__social-element"><a href="">Twitter</a></li>
+        <li class="mobile-menu__social-element"><a href="">Facebook</a></li>
+        <li class="mobile-menu__social-element"><a href="">LinkedIn</a></li>
+      </ul>
+      </div>
+      <button class="mobile-menu__close-button js-close-menu" type="button" >
+        <svg class="mobile-menu__close-button-icon" width="19px" height="19px">
+          <use
+            x=""
+            y=""
+            width="19px"
+            height="19px"
+            href="./images/icons.svg#close-button-icon"
+          ></use>
+        </svg>
+      </button>
+    </div>
     <script src="modal.js"></script>
     <script src="mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

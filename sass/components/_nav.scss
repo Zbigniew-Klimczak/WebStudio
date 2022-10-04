@@ -3,16 +3,13 @@
 @use "../utils/mixins" as flex;
 @use "../utils/transitions" as tTiming;
 .nav {
-  margin-right: 345px;
-  margin-left: 93px;
   @include flex.primary(row);
-  display: none;
 }
 .nav__item {
   padding-top: 32px;
   padding-bottom: 32px;
   &:not(:last-child) {
-    margin-right: 46px;
+    margin-right: 60px;
   }
   &--mark {
     position: relative;

@@ -6,7 +6,10 @@
   padding-top: 60px;
   padding-bottom: 60px;
   &__grid {
-    @include flex.tertiary(column);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     gap: 60px;
   }
 }

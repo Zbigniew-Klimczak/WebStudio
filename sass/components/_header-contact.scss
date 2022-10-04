@@ -3,14 +3,16 @@
 @use "../utils/mixins" as flex;
 @use "../utils/transitions" as tTiming;
 .header-contact {
-  @include flex.primary(row);
-  grid-gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  grid-gap: 10px;
   &__icon {
     fill: color.get("secondary");
-    margin-right: 10px;
+    margin-right: 8px;
     transition: fill tTiming.$primary;
   }
-  display: none;
 }
 .header-contact__link {
   @include flex.primary(row);

@@ -72,7 +72,8 @@
 .contact-form__agreements {
   position: relative;
   @include flex.primary(row);
-  margin: 14px;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 .contact-form__agreements-input {
   appearance: none;
@@ -103,7 +104,7 @@
   &__agreements-svg {
     position: absolute;
     opacity: 0;
-    top: 6px;
+    top: center;
     left: 0;
     fill: color.get("tertiary");
     pointer-events: none;

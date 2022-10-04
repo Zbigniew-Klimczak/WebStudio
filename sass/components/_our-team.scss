@@ -3,11 +3,15 @@
 @use "../utils/mixins" as flex;
 .our-team {
   &__list {
-    @include flex.tertiary(column);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 30px;
   }
   &__list-element {
-    width: 100%;
+    flex-basis: 50%;
   }
   &__figure {
     background: color.get("tertiary");

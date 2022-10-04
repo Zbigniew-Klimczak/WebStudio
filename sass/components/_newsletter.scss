@@ -4,6 +4,7 @@
 @use "../utils/transitions" as tTiming;
 .newsletter {
   width: 100%;
+  max-width: 450px;
   &__title {
     display: block;
     color: color.get("tertiary");
