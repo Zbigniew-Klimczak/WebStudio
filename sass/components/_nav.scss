@@ -4,13 +4,12 @@
 @use "../utils/transitions" as tTiming;
 .nav {
   @include flex.primary(row);
+  gap: 60px;
 }
 .nav__item {
   padding-top: 32px;
   padding-bottom: 32px;
-  &:not(:last-child) {
-    margin-right: 60px;
-  }
+
   &--mark {
     position: relative;
   }

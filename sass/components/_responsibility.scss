@@ -1,3 +1,4 @@
+@use "../utils/mixins" as flex;
 @media screen and (max-width: 767px) {
   .nav {
     display: none;
@@ -29,6 +30,102 @@
   }
   .join-us {
     margin-top: 8px;
-    margin-left: 8%;
+  }
+  .sort {
+    padding-left: 50px;
+    padding-right: 50px;
+    &__element {
+      flex-basis: calc((100% - 32px) / 5);
+    }
+  }
+  .gallery__list {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  .backdrop__position {
+    width: 58%;
+    max-width: 528px;
+  }
+  .contact-form__agreements-label {
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    &__heading {
+      margin-bottom: 50px;
+    }
+  }
+  .nav {
+    gap: 46px;
+    margin-right: 345px;
+    margin-left: 93px;
+  }
+  .header-contact {
+    flex-direction: row;
+    gap: 30px;
+  }
+  .our-strenghts__element {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+  .our-team__list-element {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+  .our-clients__element {
+    flex-basis: calc((100% - 150px) / 6);
+  }
+  .sort {
+    padding-left: 295px;
+    padding-right: 295px;
+  }
+  .gallery__list {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+  .footer__grid {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    row-gap: 70px;
+    grid-gap: 0;
+  }
+  .address {
+    align-items: flex-start;
+  }
+  .join-us {
+    margin-left: 70px;
+    margin-top: 12px;
+    &__title {
+      text-align: left;
+    }
+  }
+  .newsletter {
+    width: auto;
+    max-width: none;
+    margin-top: 12px;
+    margin-left: 78px;
+    &__title {
+      text-align: left;
+    }
+    &__grid {
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    &__input {
+      width: 358px;
+    }
+  }
+  .order {
+    &__heading {
+      font-size: 44px;
+      line-height: 1.36px;
+    }
+  }
+  .contact-form__agreements-label {
+    font-size: 14px;
   }
 }
