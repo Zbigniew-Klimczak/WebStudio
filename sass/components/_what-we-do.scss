@@ -3,6 +3,7 @@
 @use "../utils/mixins" as flex;
 
 .what-we-do {
+  padding-top: 0;
   &__list {
     @include flex.primary(row);
     gap: 30px;

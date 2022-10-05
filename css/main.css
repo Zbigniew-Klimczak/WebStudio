@@ -227,15 +227,15 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 30px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/order.jpg");
-  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("../images/order.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/order-480-1x.jpg");
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("../images/order-480-1x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 12% 15%;
+  padding: 22% 10%;
 }
 .order__heading {
-  width: 76%;
+  width: 100%;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
@@ -408,6 +408,9 @@ img {
   color: #757575;
 }
 
+.what-we-do {
+  padding-top: 0;
+}
 .what-we-do__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1276,6 +1279,9 @@ img {
   .header__icon {
     display: none;
   }
+  .order {
+    padding: 16% 25%;
+  }
   .our-strenghts__element {
     -ms-flex-preferred-size: calc((100% - 30px) / 2);
         flex-basis: calc((100% - 30px) / 2);
@@ -1321,7 +1327,7 @@ img {
   }
   .nav {
     gap: 46px;
-    margin-right: 345px;
+    margin-right: 335px;
     margin-left: 93px;
   }
   .header-contact {
@@ -1334,6 +1340,9 @@ img {
   .our-strenghts__element {
     -ms-flex-preferred-size: calc((100% - 90px) / 4);
         flex-basis: calc((100% - 90px) / 4);
+  }
+  .what-we-do {
+    padding-top: 0;
   }
   .our-team__list-element {
     -ms-flex-preferred-size: calc((100% - 90px) / 4);
@@ -1404,11 +1413,44 @@ img {
   .newsletter__input {
     width: 358px;
   }
+  .order {
+    padding: 13% 28%;
+  }
   .order__heading {
     font-size: 44px;
-    line-height: 1.36px;
+    line-height: 1.36;
   }
   .contact-form__agreements-label {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .order {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/order-480-2x.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("../images/order-480-2x.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 1), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 96dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 1dppx) {
+  .order {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/order-768-1x.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("../images/order-768-1x.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
+  .order {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/order-768-2x.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("../images/order-768-2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 1), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 1200px) and (min-resolution: 96dpi), screen and (min-width: 1200px) and (min-resolution: 1dppx) {
+  .order {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/order-1200-1x.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("../images/order-1200-1x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .order {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/order-1200-2x.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("../images/order-1200-2x.jpg");
   }
 }/*# sourceMappingURL=main.css.map */
