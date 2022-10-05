@@ -1414,7 +1414,7 @@ img {
     width: 358px;
   }
   .order {
-    padding: 13% 28%;
+    padding: 13% calc((100% - 696px) / 2);
   }
   .order__heading {
     font-size: 44px;

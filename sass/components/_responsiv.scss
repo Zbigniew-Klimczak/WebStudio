@@ -127,7 +127,7 @@
     }
   }
   .order {
-    padding: 13% 28%;
+    padding: 13% calc((100% - 696px) / 2);
     &__heading {
       font-size: 44px;
       line-height: 1.36;
