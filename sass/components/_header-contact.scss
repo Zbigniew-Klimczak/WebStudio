@@ -3,10 +3,7 @@
 @use "../utils/mixins" as flex;
 @use "../utils/transitions" as tTiming;
 .header-contact {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
+  @include flex.quinary(column);
   gap: 10px;
   &__icon {
     fill: color.get("secondary");

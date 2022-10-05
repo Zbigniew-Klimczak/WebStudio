@@ -4,10 +4,7 @@
 @use "../utils/transitions" as tTiming;
 .contact-form {
   &__grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    @include flex.quaternary(column);
     margin-bottom: 20px;
     margin-top: 2px;
   }
@@ -73,9 +70,7 @@
   position: relative;
   width: fit-content;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex.tertiary(row);
   gap: 8px;
 }
 .contact-form__agreements-input {

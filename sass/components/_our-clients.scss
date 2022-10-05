@@ -3,10 +3,7 @@
 @use "../utils/transitions" as tTiming;
 .our-clients {
   &__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    @include flex.wrapSecondary();
     gap: 30px;
   }
   &__element {

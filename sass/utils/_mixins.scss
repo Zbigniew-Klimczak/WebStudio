@@ -14,3 +14,28 @@
   align-items: center;
   flex-direction: $direction;
 }
+@mixin quaternary($direction) {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: $direction;
+}
+@mixin quinary($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: $direction;
+}
+
+@mixin wrap() {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+@mixin wrapSecondary() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

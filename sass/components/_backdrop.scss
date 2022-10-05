@@ -1,5 +1,5 @@
 @use "../utils/colors" as color;
-
+@use "../utils/mixins" as flex;
 @use "../utils/transitions" as tTiming;
 .backdrop {
   position: fixed;
@@ -8,8 +8,7 @@
   top: 0;
   left: 0;
   background-color: #00000033;
-  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity tTiming.$secondary, visibility tTiming.$secondary;
   opacity: 1;
   visibility: visible;
   &__position {
@@ -41,9 +40,7 @@
   height: 30px;
   top: 8px;
   right: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex.tertiary(row);
   background-color: color.get("tertiary");
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;

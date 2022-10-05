@@ -3,11 +3,7 @@
 @use "../utils/mixins" as flex;
 .our-team {
   &__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    @include flex.wrapSecondary();
     gap: 30px;
   }
   &__list-element {
