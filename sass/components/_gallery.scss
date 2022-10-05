@@ -3,7 +3,8 @@
 @use "../utils/mixins" as flex;
 @use "../utils/transitions" as tTiming;
 .gallery {
-  @include flex.wrap();
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 
   &__hidden-text {
